@@ -6,10 +6,6 @@ npm install -g json-server
 
 see (https://github.com/typicode/json-server#readme) for full documentation
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
