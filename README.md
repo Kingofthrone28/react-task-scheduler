@@ -19,7 +19,7 @@ Axios is a promise-based HTTP Client for node.js and the browser. It is isomorph
 - Automatic transforms for JSON data
 - Client side support for protecting against XSRF
 
-see(https://axios-http.com/docs/intro)
+see (https://axios-http.com/docs/intro) for full documentation
 
 ## `React Hooks`
 
