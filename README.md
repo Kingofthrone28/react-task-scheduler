@@ -11,7 +11,7 @@ see (https://github.com/typicode/json-server#readme) for full documentation
 - UseState
 - UseEffect
 
-Hooks State
+### Hooks State
 Hook state is the new way of declaring a state in React app. Hook uses useState() functional component for setting and retrieving state. Let us understand Hook state with the following example.
 
 ``` 
@@ -31,7 +31,7 @@ function CountApp() {
 }  
 export default CountApp; 
 ```
-Hooks Effect
+### Hooks Effect
 The Effect Hook allows us to perform side effects (an action) in the function components. It does not use components lifecycle methods which are available in class components. In other words, Effects Hooks are equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
 
 Side effects have common features which the most web applications need to perform, such as:
