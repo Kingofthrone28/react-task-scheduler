@@ -1,25 +1,87 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react'
+import Header from './components/Header';
+import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 import './App.css';
+import UtilAsync from './components/base/Utilasync';
 
-function App() {
+
+const App = () => {
+
+  //Hooks used to set/update state with function setter 
+  // uses db.json file to fetch tasks data
+  const [toggleTask, setToggleTask ] = useState(true);
+  const [tasks, setTasks] = useState([]);
+
+  // add task 
+    //generate a random ID 
+    // const id = Math.floor(Math.random() * 1000) + 1
+    // const newDataTask = {...tasks, ...task};
+    // console.log(id);
+  const addTask = async (task) => {
+    await UtilAsync(`http://localhost:5000/tasks/`,`POST`,task);
+    setTasks([...tasks, task])
+  }
+  // // delete task 
+  // const deleteTask = (id) => {
+  //   console.log("DELETE", id) 
+  //   // only show the new array of unmatched ids, 
+  //   // filter returns the unmatched set of ids, so the matched id doesn't show
+  //   const removeSetTask = tasks.filter((task) =>task.id !== id)
+  //   setTasks(removeSetTask)
+  //   console.log(setTasks(removeSetTask))
+  // }
+
+  // delete task 
+  const deleteTask = async (id) => {
+    await UtilAsync(`http://localhost:5000/tasks/${id}`,`DELETE`); 
+    // only show the new array of unmatched ids, 
+    // filter returns the unmatched set of ids, so the matched id doesn't show
+    const removeSetTask = tasks.filter((task) =>task.id !== id)
+    setTasks(removeSetTask)
+  }
+
+  //toggle reminder
+  const toggleReminder = (id) => {
+   console.log("REMINDER");
+   console.log(id); 
+   const setReminder = tasks.map(
+     (task) => {
+       return task.id === id ? { ...task, reminder: !task.reminder } : task;
+     })
+    setTasks(setReminder)
+  }
+  
+  useEffect(()=>{
+    const fetchTask = async () => {
+      const serverTask = await UtilAsync(`http://localhost:5000/tasks/`,`GET`);
+      setTasks(serverTask)
+    }
+    fetchTask();
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header 
+        toggleForm={() => setToggleTask(!toggleTask)} 
+        title="Schedule Update" 
+        toggleBtn={!toggleTask}
+        />
+      {// form controlled component to add task
+        !toggleTask && 
+        <AddTask onAdd={addTask} />
+      }
+      {tasks.length > 0 ? (
+        <Tasks 
+          tasks={tasks} 
+          onDelete={deleteTask} 
+          onToggle={toggleReminder} 
+        />
+        ) : <div className="no-task">No Task Available</div>
+      }
     </div>
   );
 }
 
 export default App;
+

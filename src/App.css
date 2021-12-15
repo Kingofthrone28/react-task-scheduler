@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -22,8 +22,105 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+.no-task{
+  background: #f7f7f7;
+  font-weight: 600;
+  padding: 50px;
 }
 
+.header{
+  color: white;
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  /* border-top: 7px solid #ccc;
+  border-bottom: 7px solid #ccc;  */
+}
+
+.disclaimer{
+  font-style: italic;
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 13px;
+}
+
+.container{
+    text-align: center;
+    border: 1px solid;
+    margin: 30px;
+    padding: 50px;
+}
+
+.delete-icon{
+  color: red;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  text-decoration: none;
+  bottom: 20px;
+}
+
+.add-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+}
+
+.add-form .form-control{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-control input{
+  padding: 15px 15px;
+  border: 0;
+  background: #f7f7f7;
+  box-shadow: -4px 9px 6px -11px black;
+}
+
+.form-control input[type="submit"]{
+  padding: 10px;
+  background: skyblue;
+}
+
+.form-control label{
+  margin-bottom: 10px;
+}
+
+.task.reminder{
+  margin: 0 0 20px;
+}
+
+.item {
+  margin-top: 0px;
+  /* background: lightgray; */
+  padding: 5px 4px;
+  font-weight: 500;
+  color: black;
+}
+
+.task ul{
+  padding: 0;
+}
+.task ul li{
+  list-style: none;
+  padding: 0 0 10px;
+}
+.reminder{
+  border-bottom: 4px solid lightcoral;
+}
+
+/* 
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +132,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
