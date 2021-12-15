@@ -42,3 +42,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## `JSON server build`
 
 this project is currently using json server as a test REST API service on local dev environment. 
+
+npm install -g json-server
+
