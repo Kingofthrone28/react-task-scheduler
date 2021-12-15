@@ -8,8 +8,8 @@ see (https://github.com/typicode/json-server#readme) for full documentation
 
 ## `React Hooks`
 
-- UseEffect
 - UseState
+- UseEffect
 
 Hooks State
 Hook state is the new way of declaring a state in React app. Hook uses useState() functional component for setting and retrieving state. Let us understand Hook state with the following example.
