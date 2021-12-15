@@ -1,3 +1,11 @@
+## `JSON server build`
+
+this project is currently using json server as a test REST API service on local dev environment. 
+
+npm install -g json-server
+
+see (https://github.com/typicode/json-server#readme) for full documentation
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,11 +47,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## `JSON server build`
-
-this project is currently using json server as a test REST API service on local dev environment. 
-
-npm install -g json-server
-
-see (https://github.com/typicode/json-server#readme) for full documentation
 
