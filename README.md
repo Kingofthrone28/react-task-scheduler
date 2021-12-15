@@ -31,6 +31,38 @@ function CountApp() {
 }  
 export default CountApp; 
 ```
+Hooks Effect
+The Effect Hook allows us to perform side effects (an action) in the function components. It does not use components lifecycle methods which are available in class components. In other words, Effects Hooks are equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
+
+Side effects have common features which the most web applications need to perform, such as:
+
+- Updating the DOM,
+- Fetching and consuming data from a server API,
+- Setting up a subscription, etc.
+
+```
+import React, { useState, useEffect } from 'react';  
+  
+function CounterExample() {  
+  const [count, setCount] = useState(0);  
+  
+  // Similar to componentDidMount and componentDidUpdate:  
+  useEffect(() => {  
+    // Update the document title using the browser API  
+    document.title = `You clicked ${count} times`;  
+  });  
+  
+  return (  
+    <div>  
+      <p>You clicked {count} times</p>  
+      <button onClick={() => setCount(count + 1)}>  
+        Click me  
+      </button>  
+    </div>  
+  );  
+}  
+export default CounterExample;  
+```
 
 ## Available Scripts
 
