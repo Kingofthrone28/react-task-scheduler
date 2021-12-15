@@ -6,6 +6,31 @@ npm install -g json-server
 
 see (https://github.com/typicode/json-server#readme) for full documentation
 
+## `React Hooks`
+
+- UseEffect
+- UseState
+
+Hooks State
+Hook state is the new way of declaring a state in React app. Hook uses useState() functional component for setting and retrieving state. Let us understand Hook state with the following example.
+
+import React, { useState } from 'react';  
+  
+function CountApp() {  
+  // Declare a new state variable, which we'll call "count"  
+  const [count, setCount] = useState(0);  
+  
+  return (  
+    <div>  
+      <p>You clicked {count} times</p>  
+      <button onClick={() => setCount(count + 1)}>  
+        Click me  
+      </button>  
+    </div>  
+  );  
+}  
+export default CountApp; 
+
 ## Available Scripts
 
 In the project directory, you can run:
