@@ -15,7 +15,8 @@ Hooks State
 Hook state is the new way of declaring a state in React app. Hook uses useState() functional component for setting and retrieving state. Let us understand Hook state with the following example.
 
 import React, { useState } from 'react';  
-  
+ 
+``` 
 function CountApp() {  
   // Declare a new state variable, which we'll call "count"  
   const [count, setCount] = useState(0);  
@@ -30,6 +31,7 @@ function CountApp() {
   );  
 }  
 export default CountApp; 
+```
 
 ## Available Scripts
 
