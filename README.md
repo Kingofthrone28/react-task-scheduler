@@ -4,6 +4,8 @@ this project is currently using json server as a test REST API service on local 
 
 npm install -g json-server
 
+npm run server (to start server)
+
 see (https://github.com/typicode/json-server#readme) for full documentation
 
 ## Axios 
