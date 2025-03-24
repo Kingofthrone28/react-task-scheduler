@@ -14,7 +14,8 @@ const Task = ({task, onDelete, onToggle}) => {
             Object.entries(task)
               .filter((item) => item[0] !== 'id' )
                 .map((item)=>{
-                  return <div className="item" key={item}>{item[1]}</div>
+                  console.log(item);
+                  return <div className={item} key={item}>{item[1]}</div>
               }
             )
            }

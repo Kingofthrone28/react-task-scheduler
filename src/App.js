@@ -19,7 +19,7 @@ const App = () => {
     // const newDataTask = {...tasks, ...task};
     // console.log(id);
   const addTask = async (task) => {
-    await UtilAsync(`http://localhost:5000/tasks/`,`POST`,task);
+    await UtilAsync(`http://localhost:5001/tasks/`,`POST`,task);
     setTasks([...tasks, task])
   }
   // // delete task 
@@ -34,7 +34,7 @@ const App = () => {
 
   // delete task 
   const deleteTask = async (id) => {
-    await UtilAsync(`http://localhost:5000/tasks/${id}`,`DELETE`); 
+    await UtilAsync(`http://localhost:5001/tasks/${id}`,`DELETE`); 
     // only show the new array of unmatched ids, 
     // filter returns the unmatched set of ids, so the matched id doesn't show
     const removeSetTask = tasks.filter((task) =>task.id !== id)
@@ -54,7 +54,7 @@ const App = () => {
   
   useEffect(()=>{
     const fetchTask = async () => {
-      const serverTask = await UtilAsync(`http://localhost:5000/tasks/`,`GET`);
+      const serverTask = await UtilAsync(`http://localhost:5001/tasks/`,`GET`);
       setTasks(serverTask)
     }
     fetchTask();

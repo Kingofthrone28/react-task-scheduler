@@ -85,6 +85,10 @@ export default CounterExample;
 
 In the project directory, you can run:
 
+### `yarn add react-scripts` 
+
+This will install the package into the app
+
 ### `yarn start`
 
 Runs the app in the development mode.\
