@@ -203,7 +203,9 @@ This project uses `json-server` as a test REST API service for the local develop
    ```bash
    yarn install
 
-2. yarn server   
+2. This will start the JSON server on port 5001. You can access the API at http://localhost:5001.
+   ```bash
+    yarn server   
 
 This will start the JSON server on port 5001. You can access the API at http://localhost:5001.
 
@@ -213,6 +215,7 @@ For more information about json-server, refer to the official documentation.
 
 Example API Endpoints:
 ```
+
   GET /tasks - Fetch all tasks
   POST /tasks - Add a new task
   DELETE /tasks/:id - Delete a task by ID
