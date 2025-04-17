@@ -22,15 +22,7 @@ const App = () => {
     await UtilAsync(`http://localhost:5001/tasks/`,`POST`,task);
     setTasks([...tasks, task])
   }
-  // // delete task 
-  // const deleteTask = (id) => {
-  //   console.log("DELETE", id) 
-  //   // only show the new array of unmatched ids, 
-  //   // filter returns the unmatched set of ids, so the matched id doesn't show
-  //   const removeSetTask = tasks.filter((task) =>task.id !== id)
-  //   setTasks(removeSetTask)
-  //   console.log(setTasks(removeSetTask))
-  // }
+
 
   // delete task 
   const deleteTask = async (id) => {
@@ -70,7 +62,7 @@ const App = () => {
       {// form controlled component to add task
         !toggleTask && 
         <AddTask onAdd={addTask} />
-      }
+  
       {tasks.length > 0 ? (
         <Tasks 
           tasks={tasks} 
