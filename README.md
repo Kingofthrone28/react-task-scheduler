@@ -212,6 +212,7 @@ The server uses the db.json file as the database. You can modify this file to ad
 For more information about json-server, refer to the official documentation.
 
 Example API Endpoints:
+
   GET /tasks - Fetch all tasks
   POST /tasks - Add a new task
   DELETE /tasks/:id - Delete a task by ID
